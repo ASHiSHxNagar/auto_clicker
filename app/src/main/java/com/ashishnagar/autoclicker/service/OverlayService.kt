@@ -325,23 +325,23 @@ class OverlayService : Service() {
         )
 
         pinView.setOnTouchListener(object : View.OnTouchListener {
-            private var initialX = 0
-            private var initialY = 0
-            private var initialTouchX = 0f
-            private var initialTouchY = 0f
+            private var touchStartX = 0
+            private var touchStartY = 0
+            private var touchStartRawX = 0f
+            private var touchStartRawY = 0f
 
             override fun onTouch(v: View, event: MotionEvent): Boolean {
                 when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
-                        initialX = pinParams.x
-                        initialY = pinParams.y
-                        initialTouchX = event.rawX
-                        initialTouchY = event.rawY
+                        touchStartX = pinParams.x
+                        touchStartY = pinParams.y
+                        touchStartRawX = event.rawX
+                        touchStartRawY = event.rawY
                         return true
                     }
                     MotionEvent.ACTION_MOVE -> {
-                        pinParams.x = initialX + (event.rawX - initialTouchX).toInt()
-                        pinParams.y = initialY + (event.rawY - initialTouchY).toInt()
+                        pinParams.x = touchStartX + (event.rawX - touchStartRawX).toInt()
+                        pinParams.y = touchStartY + (event.rawY - touchStartRawY).toInt()
                         safeUpdateView(pinView, pinParams)
 
                         // Update click coordinate to the center of the target pin

@@ -131,11 +131,11 @@ class MainActivity : AppCompatActivity() {
         if (OverlayService.isOverlayRunning) {
             binding.btnStartOverlay.text = getString(R.string.stop_overlay)
             binding.btnStartOverlay.setBackgroundColor(ContextCompat.getColor(this, R.color.accent_red))
-            binding.btnStartOverlay.setIconResource(R.drawable.ic_close)
+            binding.btnStartOverlay.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ic_close, 0, 0, 0)
         } else {
             binding.btnStartOverlay.text = getString(R.string.start_overlay)
             binding.btnStartOverlay.setBackgroundColor(ContextCompat.getColor(this, R.color.primary))
-            binding.btnStartOverlay.setIconResource(R.drawable.ic_play)
+            binding.btnStartOverlay.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ic_play, 0, 0, 0)
         }
     }
 }
