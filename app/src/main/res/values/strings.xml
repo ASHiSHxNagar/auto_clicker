@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Auto Clicker</string>
+    <string name="app_subtitle">Fast, Reliable &amp; Safe Screen Automation</string>
+
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_name">Auto Clicker Assistant</string>
+    <string name="accessibility_service_desc">Simulates automatic tap and click gestures on target screen coordinates created by you.</string>
+
+    <!-- Permissions -->
+    <string name="permission_overlay_title">Floating Overlay Permission</string>
+    <string name="permission_overlay_desc">Allows displaying the floating menu widget and draggable click targets over other apps.</string>
+    <string name="permission_accessibility_title">Accessibility Service</string>
+    <string name="permission_accessibility_desc">Required to simulate screen taps. No personal data or screen content is ever collected or transmitted.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="enable_service">Enable Service</string>
+    <string name="permission_granted">Active</string>
+    <string name="permission_missing">Required</string>
+
+    <!-- Main Actions -->
+    <string name="start_overlay">Start Floating Overlay</string>
+    <string name="stop_overlay">Stop Overlay</string>
+
+    <!-- Settings & Config -->
+    <string name="config_title">Click Configuration</string>
+    <string name="click_interval_label">Click Interval (ms)</string>
+    <string name="click_interval_hint">e.g. 300</string>
+    <string name="click_duration_label">Tap Duration (ms)</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Guide / Safety -->
+    <string name="guide_title">How to Use &amp; Safety Guide</string>
+    <string name="guide_step_1">1. Tap <b>Start Floating Overlay</b> to show the floating menu bar.</string>
+    <string name="guide_step_2">2. Use <b>+</b> to add draggable numbered targets on screen.</string>
+    <string name="guide_step_3">3. Tap <b>Play (▶)</b> to start clicking in sequence.</string>
+    <string name="guide_step_4">4. <b>Emergency Stop:</b> Tap <b>Pause (⏸)</b> or <b>X</b> on overlay, or pull down the notification bar and tap <b>Stop</b> at any time.</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_name">Auto Clicker Service</string>
+    <string name="notification_channel_desc">Active status notification with emergency stop control</string>
+    <string name="notification_title">Auto Clicker is Running</string>
+    <string name="notification_text">Tap STOP to immediately halt clicks and close overlay.</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+</resources>

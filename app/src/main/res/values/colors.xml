@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Palette -->
+    <color name="primary">#4F46E5</color>
+    <color name="primary_dark">#3730A3</color>
+    <color name="primary_light">#818CF8</color>
+    <color name="secondary">#06B6D4</color>
+    <color name="accent_green">#10B981</color>
+    <color name="accent_red">#EF4444</color>
+    <color name="accent_amber">#F59E0B</color>
+
+    <!-- UI Backgrounds and Surfaces -->
+    <color name="bg_dark">#0F172A</color>
+    <color name="surface_dark">#1E293B</color>
+    <color name="surface_light_dark">#334155</color>
+    <color name="card_border">#2A384F</color>
+
+    <!-- Overlay Floating Bar (Glassmorphic dark with blur/contrast) -->
+    <color name="overlay_bg">#EB111827</color>
+    <color name="overlay_border">#374151</color>
+    <color name="overlay_btn_bg">#1F2937</color>
+    <color name="overlay_btn_pressed">#374151</color>
+
+    <!-- Pin Marker Colors -->
+    <color name="pin_bg">#E11D48</color>
+    <color name="pin_bg_active">#10B981</color>
+    <color name="pin_border">#FFFFFF</color>
+    <color name="pin_text">#FFFFFF</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

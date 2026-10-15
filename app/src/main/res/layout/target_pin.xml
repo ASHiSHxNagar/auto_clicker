@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pinRoot"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:clickable="true"
+    android:focusable="false">
+
+    <!-- Circle marker with border -->
+    <View
+        android:id="@+id/pinCircle"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_circle_pin" />
+
+    <!-- Number indicator: 1, 2, 3... -->
+    <TextView
+        android:id="@+id/tvPinIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="1"
+        android:textColor="@color/pin_text"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</FrameLayout>

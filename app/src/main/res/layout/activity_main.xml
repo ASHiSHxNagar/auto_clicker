@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- App Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_menu_button"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_touch_app" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/app_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Permissions Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Required Permissions"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:text="Both permissions are needed to render the floating menu and simulate click gestures."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <!-- Item 1: Overlay Permission -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_floating_menu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/ivOverlayStatus"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Status"
+                    android:src="@drawable/ic_warning" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/permission_overlay_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvOverlayStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/permission_missing"
+                        android:textColor="@color/accent_amber"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnGrantOverlay"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="@string/grant_permission"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Item 2: Accessibility Permission -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_floating_menu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/ivAccessibilityStatus"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Status"
+                    android:src="@drawable/ic_warning" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/permission_accessibility_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAccessibilityStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/permission_missing"
+                        android:textColor="@color/accent_amber"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnEnableAccessibility"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="@string/enable_service"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Speed & Configuration Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default Click Speed"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Set the interval between consecutive clicks (minimum safe interval is 50ms):"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etMainInterval"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_floating_menu"
+                    android:hint="300"
+                    android:inputType="number"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="300"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="ms"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMain100"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:text="100ms"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnMain300"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:text="300ms"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnMain500"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:text="500ms"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnMain1000"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:text="1000ms"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Main Action Button -->
+        <Button
+            android:id="@+id/btnStartOverlay"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/primary"
+            android:text="@string/start_overlay"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white" />
+
+        <!-- How to Use & Safety Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_title"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/guide_step_1"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/guide_step_2"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/guide_step_3"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/guide_step_4"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
